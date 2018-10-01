@@ -1,0 +1,21 @@
+# OS generated files
+.DS_Store
+*.*~
+
+# ignore objects and archives, anywhere in the tree.
+*_bkup.*
+
+# ignore the bkup folder
+bkup/*
+
+# ignore the image and video file
+*.avi
+*.png
+*.fig
+*.eps
+
+# ignore generated html files,
+#*.html
+
+# except foo.html which is maintained by hand
+#!foo.html

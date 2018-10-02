@@ -10,6 +10,7 @@ plot_traj_iter = 1;
 addpath(genpath(pwd))
 
 %% Problem specification
+maxH = 25;
 pb_type = 1;
 pb_spec;
 
@@ -21,5 +22,5 @@ alg_spec;
 solver_opt_mdp;
 
 %% MakeVideo
-vfilename = 'makeplot/iter_ds4.avi';
+vfilename = 'makeplot/iter.avi';
 video_trajiter;

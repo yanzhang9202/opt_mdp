@@ -2,7 +2,7 @@
 switch alg_type
     case 'adal'
         adal.tau = 1/2;
-        adal.rho = 5e-1;
+        adal.rho = 7.5e-1;
         adal.maxIter = 2.6e1;
         adal.epsilon = 1e-2;
         

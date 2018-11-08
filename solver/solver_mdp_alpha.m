@@ -12,7 +12,7 @@ function [xu, J, pi] = solver_mdp_alpha(ref, instance, alpha)
 % needs to drive to the goal position.
 %
 % State variable: s = [s1, s2, t], s_i \in {0,1,2,3,4}, t is time.
-% Action set: A(s) = [a1, a2, a3, a4, a5] (indexed by [1,2,3,4, 5])
+% Action set: A(s) = [a1, a2, a3, a4, a5] (indexed by [1,2,3,4,5])
 %                   up right down left stay
 % Transition: s_{k+1} = T(s_{k}, a_i)
 % Reward function: R(s_{k}, a_i, s_{k+1})

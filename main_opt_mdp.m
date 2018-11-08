@@ -12,6 +12,7 @@ mdpsolver = 1;  % 0 - value iteration
 addpath(genpath(pwd))
 
 %% Problem specification
+maxH = 25;
 pb_type = 1;
 pb_spec;
 
@@ -23,5 +24,5 @@ alg_spec;
 solver_opt_mdp;
 
 %% MakeVideo
-vfilename = 'makeplot/iter_ds1.avi';
+vfilename = 'makeplot/iter.avi';
 video_trajiter;

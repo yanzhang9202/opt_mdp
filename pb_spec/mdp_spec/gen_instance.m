@@ -3,7 +3,7 @@ depot = [0,0; 4,0; 0,3; 4,4];
 mdpinstance.depot = depot;
 mdpinstance.start = 1;
 mdpinstance.goal = 4;
-mdpinstance.maxH = 15;
+mdpinstance.maxH = maxH;
 mdpinstance.nAct = 5;
 
 % MDP solver specifications

@@ -1,7 +1,13 @@
 % Initialize local solutions
-global use_ref
+global use_ref mdpsolver
 use_ref = 0;
-[xu, ~, ~] = solver_mdp_alpha([], mdpinstance, 0);
+% Initialize the trajectory variable
+switch mdpsolver
+    case '0'
+        [xu, ~, ~] = solver_mdp_alpha([], mdpinstance, 0);
+    case '1'
+        [xu, ~, ~] = solver_mdp_Astar([], mdpinstance, 0);
+end
 x1(:, 1) = reshape(xu(:, 1:2)', [], 1);
 % x2(:,1) = zeros();    % Suppose optimization algorithm knows nothing
                         % about the environment or goals
@@ -21,8 +27,15 @@ for t = 1 : adal.maxIter
     % solves mdp according to ref
     ref_t = x2(:,t) - lambda/rho;
     ref_t = reshape(ref_t, 2, [])';
-    [xu, ~, ~] = solver_mdp_alpha(...
-        [ref_t, zeros(size(ref_t,1), 1)], mdpinstance, rho/2);
+
+    switch mdpsolver
+        case '0'
+            [xu, ~, ~] = solver_mdp_alpha(...
+                [ref_t, zeros(size(ref_t,1), 1)], mdpinstance, rho/2);
+        case '1'
+            [xu, ~, ~] = solver_mdp_Astar(...
+                [ref_t, zeros(size(ref_t,1), 1)], mdpinstance, rho/2);
+    end
     x1_itr = xu(:, 1:2);
 
     % solves opt according to x1_t

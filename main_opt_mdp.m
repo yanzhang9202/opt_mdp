@@ -3,10 +3,12 @@ clear;
 close all;
 clc;
 
-global gverbose mdpverbose plot_traj_iter
+global gverbose mdpverbose plot_traj_iter mdpsolver
 gverbose = 1;
 mdpverbose = 0;
 plot_traj_iter = 1;
+mdpsolver = 1;  % 0 - value iteration
+                % 1 - A star
 addpath(genpath(pwd))
 
 %% Problem specification
@@ -21,5 +23,5 @@ alg_spec;
 solver_opt_mdp;
 
 %% MakeVideo
-vfilename = 'makeplot/iter_ds4.avi';
+vfilename = 'makeplot/iter_ds1.avi';
 video_trajiter;

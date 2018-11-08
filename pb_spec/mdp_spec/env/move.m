@@ -1,5 +1,5 @@
 function [s_prime] = move(s, a, instance)
-maxH = instance.maxH;
+maxH = instance.maxH-1;
 pos = s(1:2);
 t = s(3);
 % Movements with no obstacles

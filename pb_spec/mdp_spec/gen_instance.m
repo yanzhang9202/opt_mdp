@@ -8,7 +8,7 @@ mdpinstance.nAct = 5;
 
 % MDP solver specifications
 mdpinstance.epsilon = 1e-1;
-mdpinstance.maxIter = 1e2;
+mdpinstance.maxIter = 1e4;
 mdpinstance.gamma = 1; % MDP discount factor
 
 % Generate reference trajectory

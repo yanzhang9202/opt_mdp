@@ -7,7 +7,7 @@ global gverbose mdpverbose plot_traj_iter mdpsolver
 gverbose = 1;
 mdpverbose = 0;
 plot_traj_iter = 1;
-mdpsolver = 0;  % 0 - value iteration
+mdpsolver = 1;  % 0 - value iteration
                 % 1 - A star
 addpath(genpath(pwd))
 
